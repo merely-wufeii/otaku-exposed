@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Otaku exposed</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+    
+	<body>
+	
+<!--    Still doesn't autoplay on chrome -->
+<!--
+    <iframe src="" allow="autoplay" style="display:none" ></iframe>
+        
+    <audio controls autoplay loop hidden="" id="bgm">
+         <source src="bgm.mp3">
+    </audio>
+-->
+
+        
+    <div id="menu">
+<!--        <h1>Expose that Otaku!</h1>	-->
+        <img src = "images/title.png" width=400px alt="Expose that Otaku">
+        <p>Otaku(n.): people obsessed with mosly manga, anime and video games, stays home a lot and is most likely in love with fictional characters.</p>
+        <label id="switch">
+            <input type="checkbox">
+            <div class = "slider">
+                <span id="easyGameButton">dummie computer</span>
+                <span id="hardGameButton" class="selected">smart computer</span>
+            </div>
+        
+        </label>
+        
+  
+        <br>
+        <span id="userMessage"></span>
+        <br>
+        <button id="ready">Ready!</button>
+ 
+        <button id="newGameButton">start new game</button>
+        <span id="yourPoints"></span>
+        <span id="opponentPoints"></span>
+    </div>
+    
+    <div id="gameboard">
+        <img id="backgroundImg" src="images/room.jpg">
+        <img id="ship1" src = "images/2.png">
+        <img id="ship2" src = "images/3.png">
+        <img id="ship3" src = "images/3(2).png">
+        <img id="ship4" src = "images/4.png">
+        <img id="ship5" src = "images/5.png">
+        <img id="shining" src = "images/shining.png">
+        
+        <div id="shipPics">
+            
+        </div>
+        
+    </div>
+    <div id="gameboardEnnemy">
+        <img id="backgroundImg2" src="images/room2.jpg">
+        <div id="draggable">
+        </div>
+        </div>
+        
+        
+    <br>
+    <br>
+    
+	<script type="text/javascript" src="battleship.js"></script>
+	</body>
+</html>

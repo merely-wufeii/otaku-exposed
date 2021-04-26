@@ -1,0 +1,283 @@
+
+#menu{
+    margin: 5%;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    padding: 3%;
+}
+
+#yourPoints{
+    position: absolute;
+    margin-left: 20%;
+    left: 0;
+    text-align: left;
+}
+#opponentPoints{
+    position: absolute;
+    margin-right: 20%;
+    right: 0;
+    text-align: right;
+}
+body{
+    background-color: #D3FAFF;
+}
+
+button{
+    font-family:'Indie Flower';
+    font-size: 110%;
+    text-align: center;
+    border-style:hidden;
+    background-color: white;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*I found a example for switches so i copied most of the code*/
+#switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+}
+
+#switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 40px;
+    
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: orangered;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(80px);
+}
+
+#hardGameButton
+{
+  display: none;
+}
+
+#easyGameButton, #hardGameButton
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider #hardGameButton
+{display: block;
+}
+
+input:checked + .slider #easyGameButton
+{display: none;
+}
+
+#userMessage{
+    font-family: 'Permanent Marker';
+    font-size: 130%;
+    color: red;
+}
+button:hover{
+    background-color: darksalmon;
+    color: white;
+}
+body{
+    position: relative;
+}
+#gameboardEnnemy {
+    position:relative;
+    margin: auto;
+    width:500px;
+	height:500px;
+}
+#gameboardEnnemy div{
+    z-index: 2;
+	position:absolute;
+	background-color: #D3FAFF; 
+	border: 1px solid gray;
+	width:50px;
+	height:50px;
+/*    border-radius: 20%;*/
+    
+}
+#gameboard{
+    position:relative;
+    margin: auto; 
+    width:500px;
+	height:500px;
+}
+
+#gameboard div {
+    z-index: 0;
+	position:absolute; 
+	background-color: #D3FAFF; 
+	border: 1px solid gray;
+	width:50px;
+	height:50px;
+/*    border-radius: 20%;*/
+    
+}
+
+#backgroundImg{
+    position: absolute;
+    height: 500px; 
+    width: 500px; 
+    object-fit: cover;
+    opacity: 20%;
+    pointer-events: none;
+    z-index: 1;
+    object-position: left;
+
+}
+#backgroundImg2{
+    position: absolute;
+    height: 500px; 
+    width: 500px; 
+    object-fit: cover;
+    opacity: 20%;
+    pointer-events: none;
+    z-index: 3;
+    object-position: right;
+
+} 
+#shipPics img{
+    z-index: 2;
+    position: absolute;
+    opacity: 90%;
+    display: block;
+    pointer-events: none;
+/*    This doesn't work and I don't understand why*/
+}
+.rotate{
+    position : relative;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+}
+#ship1{
+    height = 100px;
+    z-index: 2;
+    position: absolute;
+    opacity: 100%;
+    display: none;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+}
+#ship2{
+    z-index: 2;
+    position: absolute;
+    opacity: 100%;
+    display: none;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+}
+#ship3{
+    z-index: 2;
+    position: absolute;
+    opacity: 100%;
+    display: none;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+}
+#ship4{
+    height: 200px;
+    width: 50px;
+    z-index: 2;
+    position: absolute;
+    opacity: 100%;
+    display: none;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+    
+}
+#ship5{
+    z-index: 2;
+    position: absolute;
+    opacity: 100%;
+    display: none;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+}
+
+.spin{
+    margin: auto;
+    transition: 1s;
+    
+}
+#shining{
+    z-index: 3;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    display: none;
+    transform: rotate(90deg);
+    pointer-events: none;
+}
+.enlarge{
+    z-index: 4;
+    position: absolute;
+    margin: auto;
+    margin-top: auto;
+    transform: scale(2);
+    opacity: 100%;
+    left: 45%;
+    top: 130px;
+    pointer-events: none;
+    
+}
+
+#draggable {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+}
+
+#myShip1{
+    cursor: move;
+    z-index: 10;
+}
+
+
+@media only screen and (max-width: 800px){
+
+}
